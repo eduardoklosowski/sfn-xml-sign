@@ -28,6 +28,15 @@ XML no padrão do [SPI](https://www.bcb.gov.br/estabilidadefinanceira/sistemapag
 sfn-xml-sign verify spi data/client.crt example-spi-message.xml
 ```
 
+## Instação
+
+Compile o projeto executando o comando `make`. Após isso copie o arquivo `sfn-xml-sign` para algum diretório do `$PATH` como `/usr/local/bin`. Exemplo:
+
+```sh
+make
+sudo cp sfn-xml-sign /usr/local/bin
+```
+
 ## Completion
 
 Essa ferramenta possui complete para facilitar o uso em alguns shells. Execute o comando a baixo para listar os shells disponíveis:
