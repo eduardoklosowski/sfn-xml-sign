@@ -8,24 +8,24 @@ Ferramenta para assinar e validar XMLs trafegados no Sistema Financeiro Nacional
 
 XML no padrão do [DICT](https://www.bcb.gov.br/estabilidadefinanceira/dict):
 ```sh
-sfn-xml-sign sign dict data/client.crt data/client.key arquivo.xml
+sfn-xml-sign sign dict data/client.crt data/client.key example-dict-message.xml
 ```
 
 XML no padrão do [SPI](https://www.bcb.gov.br/estabilidadefinanceira/sistemapagamentosinstantaneos):
 ```sh
-sfn-xml-sign sign spi data/client.crt data/client.key arquivo.xml
+sfn-xml-sign sign spi data/client.crt data/client.key example-spi-message.xml
 ```
 
 ### Validar XML
 
 XML no padrão do [DICT](https://www.bcb.gov.br/estabilidadefinanceira/dict):
 ```sh
-sfn-xml-sign verify dict data/bcb.crt arquivo.xml
+sfn-xml-sign verify dict data/bcb.crt example-dict-message.xml
 ```
 
 XML no padrão do [SPI](https://www.bcb.gov.br/estabilidadefinanceira/sistemapagamentosinstantaneos):
 ```sh
-sfn-xml-sign verify spi data/client.crt arquivo.xml
+sfn-xml-sign verify spi data/client.crt example-spi-message.xml
 ```
 
 ## Completion
