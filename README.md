@@ -4,6 +4,8 @@ Ferramenta para assinar e validar XMLs trafegados no Sistema Financeiro Nacional
 
 ## Exemplo de Uso
 
+[![Vídeo no asciinema](https://asciinema.org/a/1267861.svg)](https://asciinema.org/a/1267861)
+
 ### Assinar XML
 
 XML no padrão do [DICT](https://www.bcb.gov.br/estabilidadefinanceira/dict):
