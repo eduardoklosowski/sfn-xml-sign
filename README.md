@@ -27,3 +27,17 @@ XML no padrão do [SPI](https://www.bcb.gov.br/estabilidadefinanceira/sistemapag
 ```sh
 sfn-xml-sign verify spi data/client.crt arquivo.xml
 ```
+
+## Completion
+
+Essa ferramenta possui complete para facilitar o uso em alguns shells. Execute o comando a baixo para listar os shells disponíveis:
+```sh
+sfn-xml-sign completion
+```
+
+Exemplo de como configurar no Bash do usuário atual:
+```sh
+mkdir -p ~/.local/share/bash-completion/completions
+echo '. <(sfn-xml-sign completion bash)' > ~/.local/share/bash-completion/completions/sfn-xml-sign
+. <(sfn-xml-sign completion bash)
+```

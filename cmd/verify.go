@@ -27,6 +27,17 @@ var verifyCmd = &cobra.Command{
 
 		return nil
 	},
+	ValidArgsFunction: func(cmd *cobra.Command, args []string, toComplete string) ([]string, cobra.ShellCompDirective) {
+		if len(args) == 0 {
+			return []string{"dict", "spi"}, cobra.ShellCompDirectiveNoFileComp
+		} else if len(args) == 1 {
+			return []string{"crt", "cer", "pem"}, cobra.ShellCompDirectiveFilterFileExt
+		} else if len(args) == 2 {
+			return []string{"xml"}, cobra.ShellCompDirectiveFilterFileExt
+		} else {
+			return nil, cobra.ShellCompDirectiveNoFileComp
+		}
+	},
 	Run: func(cmd *cobra.Command, args []string) {
 		signType := args[0]
 
