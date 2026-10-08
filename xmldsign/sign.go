@@ -4,17 +4,14 @@ import (
 	"crypto/rsa"
 	"crypto/x509"
 
-	"github.com/beevik/etree"
+	"github.com/eduardoklosowski/sfn-xml-sign/internal/certificateutils"
+	"github.com/eduardoklosowski/sfn-xml-sign/internal/xmlutils"
 )
 
 func Sing(cert *x509.Certificate, key *rsa.PrivateKey, data []byte) ([]byte, error) {
-	document := etree.NewDocument()
-	err := document.ReadFromBytes(data)
-	if err != nil {
-		return nil, err
-	}
+	certInfo := certificateutils.NewCertificateInfo(*cert)
 
-	signedData, err := document.WriteToBytes()
+	signedData, err := xmlutils.Sign(certInfo, key, data)
 	if err != nil {
 		return nil, err
 	}
